@@ -22,7 +22,7 @@ Primero haré los cinco intentos en el computador local:
 
 Se hacen un intento en otro computador:
 
-![ApplicationScoped2](imagenes/ApplicationScoped2.png)
+![ApplicationScoped2](imagenes/ApplicationScoped2.jpg)
 
 El segundo computador inicia con los valores que se obtuvieron tras los 5 intentos que se hicieron en el otro, se hace un intento y se actualiza la página en el computador donde se hicieron los 5 intentos, los valores en ambos ahora son iguales.
 
@@ -36,7 +36,7 @@ Ahora se vuelven hacer los 5 intentos pero con @SessionScoped
 
 En el otro computador inicia desde 0, sin ningún intento.
 
-![SessionScoped2](imagenes/SessionScoped2.png)
+![SessionScoped2](imagenes/SessionScoped2.jpg)
 
 No coinciden los valores del premio, el segundo computador inicia desde 0 intentos.
 
