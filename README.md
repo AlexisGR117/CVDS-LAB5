@@ -44,3 +44,9 @@ No coinciden los valores del premio, el segundo computador inicia desde 0 intent
 
 La anotación @SessionScoped se utiliza para indicar que un objeto debe durar mientras el usuario esté en una sesión. Cada vez que se inicie una sesión, se creará una única instancia del objeto, y cuando se cierre la sesión, se destruirá la instancia. Es decir, el objeto es específico para cada sesión del usuario y no se comparte con otras sesiones.
 Por otro lado, la anotación @ApplicationScoped se utiliza para indicar que un objeto debe durar mientras la aplicación esté en funcionamiento. Se crea una única instancia del objeto que se comparte con todos los usuarios que utilizan la aplicación. La instancia del objeto se destruirá cuando se detenga la aplicación o se reinicie.
+
+**Herramientas de desarrollador del explorador**
+
+![Visibilidad1](imagenes/Visibilidad1.jpg)
+
+![Visibilidad2](imagenes/Visibilidad2.jpg)
