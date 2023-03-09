@@ -18,7 +18,7 @@ public class Service {
 		in.close();
 		return todo;
 	}
-	private static String cc{
+	private static String todoToHTMLRow(Todo todo) {
 		return new StringBuilder("<tr>")
 		.append("<td>")
 		.append(todo.getUserId())
