@@ -47,6 +47,6 @@ Por otro lado, la anotación @ApplicationScoped se utiliza para indicar que un o
 
 **Herramientas de desarrollador del explorador**
 
-![Visibilidad1](imagenes/Visibilidad1.jpg)
+![Visibilidad1](imagenes/Visibilidad1.png)
 
-![Visibilidad2](imagenes/Visibilidad2.jpg)
+![Visibilidad2](imagenes/Visibilidad2.png)
