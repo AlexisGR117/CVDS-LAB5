@@ -8,8 +8,11 @@ import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
+import org.springframework.stereotype.Component;
+
+@Component
 @ManagedBean(name = "juego")
-@ApplicationScoped
+@SessionScoped
 public class Juego {
 
     private int numeroAdivinar, numero, intentos, premio;
