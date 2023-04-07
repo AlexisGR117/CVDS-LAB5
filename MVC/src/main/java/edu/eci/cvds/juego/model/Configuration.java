@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import org.springframework.stereotype.Component;
 
 /**
- * Entidad de base de datos que guarda la configuracion del juego.
+ * Entidad de base de datos que guarda la configuración del juego.
  * @author Jefer Gonzalez
  * @version 1.0 (03/04/2023)
  */
@@ -20,13 +20,13 @@ public class Configuration {
 	private String valor;
 
 	/**
-	 * Constructor vacio para objetos de clase Configuration.
+	 * Constructor vacío para objetos de clase Configuration.
 	 */
 	public Configuration () {}
 
 	/**
 	 * Constructor para objetos de clase Configuration.
-	 * @param propiedad Nombre de la proiedad del juego.
+	 * @param propiedad Nombre de la propiedad del juego.
 	 * @param valor Valor que se le da a la propiedad del juego.
 	 */
 	public Configuration(String propiedad, String valor) {
@@ -52,6 +52,6 @@ public class Configuration {
 
 	@Override
 	public String toString() {
-		return "Configuracion [propiedad=" + propiedad + ", valor=" + valor + "]";
+		return "Configuración [propiedad=" + propiedad + ", valor=" + valor + "]";
 	}
 }

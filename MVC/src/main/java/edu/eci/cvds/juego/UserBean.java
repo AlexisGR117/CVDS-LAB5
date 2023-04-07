@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * Bean que maneja la interacciones del usuario con la pagina de incio de la aplicacion.
+ * Bean que maneja la interacciones del usuario con la página de inicio de la aplicación.
  * @author Jefer Gonzalez
  * @version 1.0 (03/04/2023)
  */
@@ -17,34 +17,34 @@ import org.springframework.stereotype.Component;
 @SessionScoped
 public class UserBean {
 
-    private String nombre;
-    //Inyeccion de las dependencias
+    private String name;
+    //Inyección de las dependencias
     @Autowired
     ConfigurationService configurationService;
     @Autowired
-    Juego juego;
+    Game game;
 
     /**
-     * Hace unas pruebas y obtiene el valor de la configuracion con propiedad "Premio" y
+     * Hace unas pruebas y obtiene el valor de la configuración con propiedad "Premio" y
      * le asigna este valor al premio del juego.
      */
-    public void ingresar() {
+    public void enter() {
         //Pruebas :3
         System.out.println("\nObteniendo todas las configuraciones....");
-        configurationService.getAllConfiguration().forEach(configuration -> System.out.println(configuration));
+        configurationService.getAllConfiguration().forEach(System.out::println);
 
-        System.out.println("\nObteniendo la configuracion con propiedad = 'Premio'....");
+        System.out.println("\nObteniendo la configuración con propiedad = 'Premio'....");
         System.out.println(configurationService.getConfiguration("Premio"));
-        // Obtener el valor del premio al oprimir el valor y asignarselo al premio
-        int premio = Integer.parseInt(configurationService.getConfiguration("Premio").getValor());
-        juego.setPremio(premio);
+        // Obtener el valor del premio al oprimir el valor y asignárselo al premio
+        int prize = Integer.parseInt(configurationService.getConfiguration("Premio").getValor());
+        game.setPrize(prize);
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre (String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 }

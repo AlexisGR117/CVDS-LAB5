@@ -13,20 +13,21 @@ import edu.eci.cvds.juego.service.ConfigurationService;
 import javax.faces.webapp.FacesServlet;
 import javax.servlet.ServletContext;
 import java.util.Arrays;
+import java.util.Collections;
 
 /**
- * Clase principal de la Aplicacion Spring Boot
+ * Clase principal de la Aplicación Spring Boot
  */
 @SpringBootApplication
-public class Aplicacion {
+public class Application {
     @Autowired
     ConfigurationService configurationService;
     public static void main (String[] args) {
-      SpringApplication.run(Aplicacion.class, args);
+      SpringApplication.run(Application.class, args);
     }
 
     /**
-     * Metodo que configura y registra el servlet de JSF en el contexto del servidor web.
+     * Método que configura y registra el servlet de JSF en el contexto del servidor web.
      */
     @Bean
     ServletRegistrationBean jsfServletRegistration (ServletContext servletContext) {
@@ -41,18 +42,18 @@ public class Aplicacion {
     }
 
     /**
-     * Agrega el registro a la base de datos cuando se incia la palicacion y hace algunas pruebas.
+     * Agrega el registro a la base de datos cuando se inicia la aplicación y hace algunas pruebas.
      */
     @Bean
     public CommandLineRunner run() throws Exception {
         return (args) -> {
             //Se agrega el registro a la base de datos
-            System.out.println("Agregando configuracion....\n");
+            System.out.println("Agregando configuración....\n");
             configurationService.addConfiguration(new Configuration("Premio", "90000"));
             //Pruebas
             System.out.println("\nObteniendo todas las configuraciones....");
-            configurationService.getAllConfiguration().forEach(configuracion -> System.out.println(configuracion));
-            System.out.println("\nObteniendo la configuracion con propiedad = 'Premio'....");
+            configurationService.getAllConfiguration().forEach(System.out::println);
+            System.out.println("\nObteniendo la configuración con propiedad = 'Premio'....");
             System.out.println(configurationService.getConfiguration("Premio"));
         };
     }
