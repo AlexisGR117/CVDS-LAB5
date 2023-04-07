@@ -10,6 +10,11 @@ import javax.faces.bean.SessionScoped;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * Juego de adivinar un numero aleatorio entre 1 y 20.
+ * @author Jefer Gonzalez
+ * @version 2.0 (03/04/2023)
+ */
 @Component
 @ManagedBean(name = "juego")
 @SessionScoped
@@ -18,11 +23,17 @@ public class Juego {
     private int numeroAdivinar, numero, intentos, premio;
     private String estado;
     private List<Integer> lista;
-    
+
+    /**
+     * Contructor para objetos de clase Juego.
+     */
     public Juego() {
         restart();
     }
 
+    /**
+     * Metodo que verifica que el numero guardado sea el numero establecido para adivinar.
+     */
     public void guess() {
     	intentos++;
     	lista.add(numero);
@@ -36,6 +47,9 @@ public class Juego {
         }
     }
 
+    /**
+     * Reinicia el juego restablenciendo los valores y estableciendo un nuevo numero a adivianr.
+     */
     public void restart() {
         Random rand = new Random();
         numeroAdivinar = rand.nextInt(20) + 1;
