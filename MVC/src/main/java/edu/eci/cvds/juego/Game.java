@@ -53,7 +53,7 @@ public class Game {
         Random rand = new Random();
         numberGuess = rand.nextInt(20) + 1;
         attempts = 0;
-        prize = 100000;
+        prize = 200000; //
         number = 10;
         list = new ArrayList<Integer>();
         state = "Adivina el número entre 1 y 20!";

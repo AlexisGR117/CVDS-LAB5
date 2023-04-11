@@ -1,5 +1,6 @@
 package edu.eci.cvds.juego;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ManagedBean(name = "userBean")
-@SessionScoped
+@ApplicationScoped
 public class UserBean {
 
     private String name;
@@ -28,7 +29,7 @@ public class UserBean {
      * Hace unas pruebas y obtiene el valor de la configuración con propiedad "Premio" y
      * le asigna este valor al premio del juego.
      */
-    public void enter() {
+    public String enter() {
         //Pruebas :3
         System.out.println("\nObteniendo todas las configuraciones....");
         configurationService.getAllConfiguration().forEach(System.out::println);
@@ -38,6 +39,7 @@ public class UserBean {
         // Obtener el valor del premio al oprimir el valor y asignárselo al premio
         int prize = Integer.parseInt(configurationService.getConfiguration("Premio").getValor());
         game.setPrize(prize);
+        return "guess.xhtml";
     }
 
     public String getName() {

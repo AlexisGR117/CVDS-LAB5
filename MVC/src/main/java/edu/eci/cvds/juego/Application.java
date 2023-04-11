@@ -49,7 +49,7 @@ public class Application {
         return (args) -> {
             //Se agrega el registro a la base de datos
             System.out.println("Agregando configuración....\n");
-            configurationService.addConfiguration(new Configuration("Premio", "90000"));
+            configurationService.addConfiguration(new Configuration("Premio", "100000"));
             //Pruebas
             System.out.println("\nObteniendo todas las configuraciones....");
             configurationService.getAllConfiguration().forEach(System.out::println);
